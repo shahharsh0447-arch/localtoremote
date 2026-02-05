@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>date</title>
+</head>
+<body>
+    <div id="res"></div>
+    <button onclick="data()">date</button>
+    <button onclick="year()">year</button>
+    <button onclick="month()">month</button>
+    <button onclick="hour()">hour</button>
+
+</body>
+
+    <script>
+        var d = new Date()
+        function data(){
+            document.getElementById("res").innerHTML = d;
+        }
+        
+        function hour(){
+             var hour = d.getTime();
+            document.getElementById("res").innerHTML = hour;
+        }
+
+        function year(){
+             var year = d.getFullYear();
+            document.getElementById("res").innerHTML = year;
+        }
+
+        function month(){
+             var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("res").innerHTML = month[d.getMonth()];
+        }
+
+    </script>
+
+</html>
